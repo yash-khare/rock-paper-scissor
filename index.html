@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+</head>
+<body>
+  <script>
+    function getComputerChoice(){
+        let a= Math.random();
+        a=Math.floor(a*10);
+        if(a%3==0)
+        return "Rock";
+        else if(a%2==0)
+        return "Paper";
+        else
+        return "Scissor";
+
+    }
+   // console.log(getComputerChoice());
+    let playerSelection=prompt("what is your choice");
+    function play(d,c){
+            
+            if((d=="rock" && c=="Paper") || (d=="paper" && c=="Scissor") ||(d=="Scissor" && c=="Rock"))
+            return "computer wins";
+            else if((d=="rock" && c=="Scissor") || (d=="paper" && c=="Rock") ||(d=="Scissor" && c=="Paper"))
+            return "player wins";  
+            else 
+            return "tie";        
+    }
+    console.log(play(playerSelection,getComputerChoice()));
+  </script>  
+</body>
+</html>
